@@ -2,9 +2,12 @@ import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'bqq27frk'
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
+
 const baseClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  projectId,
+  dataset,
   apiVersion: '2024-01-01',
   useCdn: false,
   token: process.env.SANITY_API_TOKEN,
