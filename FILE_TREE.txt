@@ -1,0 +1,78 @@
+barbados-island-properties/
+├── .env.local (to be configured)
+├── .gitignore
+├── next.config.js
+├── tsconfig.json
+├── tailwind.config.ts
+├── package.json
+├── README.md
+│
+├── sanity/
+│   ├── sanity.config.ts
+│   ├── structure.ts
+│   ├── schemas/
+│   │   ├── index.ts
+│   │   ├── siteSettings.ts
+│   │   ├── agent.ts
+│   │   ├── location.ts
+│   │   ├── collection.ts
+│   │   ├── amenity.ts
+│   │   ├── property.ts
+│   │   └── enquiry.ts
+│   └── desk/
+│       └── propertyActions.tsx
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx (homepage)
+│   │   ├── (site)/
+│   │   │   ├── layout.tsx
+│   │   │   ├── about/page.tsx
+│   │   │   ├── concierge/page.tsx
+│   │   │   ├── property-management/page.tsx
+│   │   │   ├── contact/page.tsx
+│   │   │   ├── holiday-rentals/
+│   │   │   │   ├── page.tsx (listings)
+│   │   │   │   └── [slug]/page.tsx (property detail)
+│   │   │   └── sales/
+│   │   │       ├── page.tsx (listings)
+│   │   │       └── [slug]/page.tsx (property detail)
+│   │   ├── api/
+│   │   │   ├── enquiry/route.ts (POST enquiries)
+│   │   │   ├── import-properties/route.ts (CSV import)
+│   │   │   └── send-email/route.ts (Resend integration)
+│   │   └── admin/
+│   │       ├── layout.tsx
+│   │       └── import/page.tsx (CSV import UI)
+│   │
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Navigation.tsx
+│   │   ├── CurrencySwitcher.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── PropertyCard.tsx
+│   │   ├── PropertyGallery.tsx
+│   │   ├── RefinementPanel.tsx
+│   │   ├── EnquiryForm.tsx
+│   │   ├── GoogleMap.tsx
+│   │   ├── AgentCard.tsx
+│   │   ├── DateRangePicker.tsx
+│   │   ├── AmenityIcon.tsx
+│   │   └── Shell.tsx (watermark)
+│   │
+│   ├── lib/
+│   │   ├── sanity.ts (client config)
+│   │   ├── queries.ts (GROQ queries)
+│   │   ├── currency.ts (conversion logic)
+│   │   ├── csv-parser.ts (CSV import)
+│   │   ├── email.ts (Resend setup)
+│   │   ├── whatsapp.ts (WA link generator)
+│   │   └── types.ts (TypeScript interfaces)
+│   │
+│   └── styles/
+│       └── globals.css
+│
+└── public/
+    └── icons/ (SVG icons as components)
