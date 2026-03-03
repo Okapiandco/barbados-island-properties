@@ -9,7 +9,7 @@ export default defineType({
       name: 'propertyId',
       title: 'Property ID (for CSV sync)',
       type: 'string',
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
       description: 'Unique identifier used for bulk imports. Cannot be changed.',
     }),
     defineField({

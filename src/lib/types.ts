@@ -129,6 +129,7 @@ export interface Enquiry {
 }
 
 export interface CurrencyRate {
+  [key: string]: number
   USD: number
   GBP: number
   CAD: number
